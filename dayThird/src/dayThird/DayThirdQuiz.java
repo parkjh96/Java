@@ -50,6 +50,7 @@ public class DayThirdQuiz {
         for (int number : numbers) {
             if (number == input) {
                 System.out.println("정답!");
+                break; // 정답을 찾으면 멈춤. 실행시간을 유의미하게 줄일 수 있다
             }
         }
 
