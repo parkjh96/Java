@@ -5,11 +5,33 @@ public class Hero { // Pascal case + 명사
     // camel case + 명사
     String name;
     int hp;
+    Sword sword;
+    static int money;
     // field variable, global variable, member variable, property
     
+    // 기본 생성자 primary constructor
+    Hero(){
+        this("이름 없음");
+    }
+    // 생성자 오버로드
+    Hero(String name){
+        this.name = name;
+        this.hp = 100;
+        sword = new Sword();
+    }
     
+    Hero(String name, int hp){
+        this.name = name;
+        this.hp = 100;
+        sword = new Sword();
+    }
+    
+    /*
     // 메소드 camel case + 동사
-    void attack() {}
+    void attack() {
+        System.out.println(this.name + "는 공격했다");
+        System.out.println("적에게 5포인트의 데미지를 주었다");
+    }
 
     void run() {
         System.out.println(this.name + "는 도망쳤다");
@@ -32,5 +54,5 @@ public class Hero { // Pascal case + 명사
     void sleep() {
         this.hp = 100;
         System.out.println(this.name + "는(은) 잠을 자고 회복했다!");
-    }
+    }*/
 }
